@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    </head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="col-md-offset-2 col-md-8" style="margin-top: 20px">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Mob Number</th>
+                        <th>Name </th>
+                        <th>Street Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in myWelcome">
+                        <td>{{x.userName}}</td>
+                        <td>{{x.phoneNumbers[0].value}}</td>
+                        <td>{{x.name.familyName}} {{x.name.givenName}}</td>
+                        <td>{{x.addresses[0].streetAddress}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
